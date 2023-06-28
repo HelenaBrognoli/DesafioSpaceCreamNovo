@@ -1,0 +1,164 @@
+:root{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+   
+  --font-size: 1.6rem;
+  --ff-heading: 'Staatliches', cursive; 
+  --ff-texting: 'Palanquin';
+
+}
+
+body{
+  font-size: var(--font-size);
+  background-color: #E5E5E5;
+  font-family: var(--ff-heading);
+}
+
+.page{
+  position: relative;
+  width: 38.4rem;
+  margin: 0 auto;
+  background-color: hsla(233, 100%, 97%, 1);
+  padding-bottom: 2.8rem;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 27.9rem;
+  background-color: hsla(218, 17%, 62%, 1);
+}
+
+header img{
+  margin: 3.2rem auto ;
+  height: 13.7rem;
+  animation: logo-turn 1s;
+}
+
+.title{
+  background-color:hsla(275, 18%, 79%, 1);
+  position: absolute;
+  width: 100%;
+  height: 4.9rem;
+  top: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h1{
+  color: white;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 2px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+  margin: 1.4rem auto ;
+}
+
+main p{
+  font-family: var(--ff-texting);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-align: center;
+  font-style: normal;
+  color: #23053A;
+  width: 30rem;
+  animation: horizontalposition 1s;
+}
+
+.card{
+  position: relative;
+}
+
+main div:nth-child(2){
+  animation: horizontalposition2 1s;
+  transition: all 200ms;
+}
+main div:nth-child(3){
+  animation: horizontalposition 1s;
+  transition: all 200ms;
+}
+main div:nth-child(4){
+  animation: horizontalposition2 1s;
+  transition: all 200ms;
+}
+
+main div:nth-child(5){
+  animation: horizontalposition 1s;
+  transition: all 200ms;
+}
+
+.card img:hover{
+  transform: scale(1.1);
+}
+
+.card h2{
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  z-index: 2;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05rem;
+  color: hsla(232, 17%, 35%, 1);
+
+  background-color: hsla(312, 91%, 96%, 1);
+  border-radius: 20px;
+  padding: 0 2rem;
+
+  animation: head-images 1s 1s backwards;
+}
+
+@keyframes logo-turn {
+  0%{
+    transform: rotateY(0);
+  }
+  100%{
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes head-images {
+  0%{
+    transform: translateY(-16px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes horizontalposition{
+  0%{
+    transform: translateX(-100px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes horizontalposition2{
+  0%{
+    transform: translateX(100px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
